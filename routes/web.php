@@ -23,7 +23,7 @@ Route::get('/asistencias/pdf_fechas', [AsistenciaController::class, 'pdf_fechas'
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 
 Route::resource('/miembros', \App\Http\Controllers\MiembroController::class)->middleware('can:miembros');
