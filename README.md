@@ -1,3 +1,85 @@
+
+<h1 align="center"><b>Sistema de Control de Asistencia con Framework Laravel V10, Bases de datos MySQL y Frontend con AdminLTE y Bootstrap</b></h1>
+<p>Este sistema tiene como fin el capturar la asistencia tomada por un secretario/a con el fin de catalogar la periodicidad de asistencia de sus fieles. Puede adaptarse a cualquier necesidad que el cliente requiera ya que trabaja de manera modular.</p>
+<p>A continuación dejo los módulos creados, submenus de cada uno, función y futuras mejoras</p>
+<p>
+    <li>
+        Usuarios: Módulo exclusivo de usuarios donde podemos cargar nuevos usuarios o listarlos
+        <ul>
+            <li>
+                Nuevo Usuario
+            </li>
+            <li>
+                Listado de Usuarios
+            </li>
+        </ul>
+    </li>
+</p>
+<p>
+    <li>
+        Miembros: Módulo exclusivo de miembros donde podemos cargar nuevos miembros o listarlos
+        <ul>
+            <li>
+                Nuevo Miembro
+            </li>
+            <li>
+                Listado de Miembros
+            </li>
+        </ul>
+    </li>
+</p>
+
+<p>
+    <li>
+        Ministerios: Módulo exclusivo de ministerios donde podemos cargar nuevos ministerios o listarlos
+        <ul>
+            <li>
+                Nuevo Ministerio
+            </li>
+            <li>
+                Listado de Ministerios
+            </li>
+        </ul>
+    </li>
+</p>
+
+<p>
+    <li>
+        Asistencias: Módulo exclusivo de asistencias donde podemos cargar nuevas asistencias de los usuarios o listarlas
+        <ul>
+            <li>
+                Nueva Asistencia
+            </li>
+            <li>
+                Listado de Asistencias
+            </li>
+        </ul>
+    </li>
+</p>
+<p>
+    <li>
+        Reportes
+        <ul>
+            <li>
+                Asistencia: Módulo exclusivo de asistencias donde podemos generar reportes en formato <b>PDF</b> para compartir
+            </li>
+        </ul>
+    </li>   
+</p>
+ 
+<p>
+    Por el momento cuenta con dos tipos de usuarios:
+    <li>
+        Administrador: Acceso total al sistema
+    </li>
+    <li>
+        Secretario/a: Acceso a la asistencias y reportes
+    </li>
+</p>
+<p><b>En un documento aparte se mostrarán las capturas de cada módulo (todavía en desarrollo)</b></p>
+<p>Su dashboard principal cuenta con vistas de cantidades de registros cargados por módulo</p>
+<p>Se está trabajando en un script para cargar los usuarios principales en sistema para poder ejecutar sin problemas</p>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
