@@ -38,7 +38,7 @@
                                 <th>Teléfono</th>
                                 <th>Email</th>
                                 <th>Estado</th>
-                                <th>Agergado</th>
+                                <th>Agregado</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content" style="margin: 20px;">
-    <h1>Página Principal</h1>
+    <h1>Bienvenido</h1>
     <br>
 
     <div class="row">

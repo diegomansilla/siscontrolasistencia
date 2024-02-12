@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span id="card_title">
-                            Reporte de Asistencias
+                            Reporte de Miembros
                         </span>
                     </div>
                 </div>
@@ -23,13 +23,13 @@
                         <div class="col-md-3 col-sm-6 col-12">
                             <div class="info-box" style="height: 92px;">
                                 <span class="info-box-icon bg-info">
-                                    <a href="{{url('/asistencias/pdf')}}" target="_blank">
+                                    <a href="{{url('/miembros/pdf')}}" target="_blank">
                                         <i class="bi bi-printer"></i>
                                     </a>
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Imprimir Reporte</span>
-                                    <span class="info-box-number">Asistencias</span>
+                                    <span class="info-box-number">Miembros</span>
                                 </div>
 
                             </div>
@@ -44,14 +44,14 @@
                                     </a>
                                 </span>
                                 <div class="info-box-content">
-                                    <form action="{{url('/asistencias/pdf_fechas')}}" target="_blank" method="get">
+                                    <form action="{{url('/miembros/pdf_fechas')}}" target="_blank" method="get">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label for="">Fecha Inicio</label>
+                                                <label for="">Desde</label>
                                                 <input type="date" name="fi" class="form-control">
                                             </div>
                                             <div class="col-md-4">
-                                                <label for="">Fecha Fin</label>
+                                                <label for="">Hasta</label>
                                                 <input type="date" name="ff" class="form-control">
                                             </div>
                                             <div class="col-md-4">

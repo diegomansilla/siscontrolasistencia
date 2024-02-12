@@ -197,6 +197,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Asistencias</p>
                   </a>
                 </li>
+
+                <li class="nav-item">
+                  <a href="{{url('miembros/reportes')}}" class="nav-link">
+                    <i class="bi bi-person-add"></i>
+                    <p>Miembros</p>
+                  </a>
+                </li>
               </ul>
             </li>
 
@@ -246,10 +253,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <footer class="main-footer">
       <!-- To the right -->
       <div class="float-right d-none d-sm-inline">
-        Anything you want
+        Innovando para el futuro.
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2024 <a href="#">DemSoft</a>.</strong> Todos los derechos reservados.
     </footer>
   </div>
   <!-- ./wrapper -->

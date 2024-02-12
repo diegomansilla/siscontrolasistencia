@@ -58,7 +58,7 @@ class AsistenciaController extends Controller
     public function create()
     {
         $asistencia = new Asistencia();
-        $miembros = Miembro::pluck('nombre_apellido','id');
+        $miembros = Miembro::where('estado','=',"1")->pluck('nombre_apellido','id');
         return view('asistencia.create', compact('asistencia','miembros'));
     }
 

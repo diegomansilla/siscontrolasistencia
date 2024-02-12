@@ -6,12 +6,37 @@ use App\Models\Miembro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\App;
 
 class MiembroController extends Controller
 {
     public function index(){
         $miembros = Miembro::all()->sortByDesc('id');
         return view('miembros.index', ['miembros'=>$miembros]);
+    }
+
+    public function reportes(){
+        //$miembros = Miembro::all()->sortByDesc('id');
+        return view('miembros.reportes');
+    }
+
+    public function pdf()
+    {
+        $miembros = Miembro::all();
+        $pdf = Pdf::loadView('miembros.pdf', ['miembros'=>$miembros]);
+        return $pdf->stream();
+    }
+
+    public function pdf_fechas(Request $request)
+    {
+        $fi = $request->fi;
+        $ff = $request->ff;
+        $miembros = Miembro::where('fcha_ingreso','>=',$fi)->where('fcha_ingreso','<=',$ff)->get();
+        
+        $pdf = Pdf::loadView('miembros.pdf_fechas', ['miembros'=>$miembros]);
+        return $pdf->stream();
+        //return view('miembro.pdf_fechas',['miembros'=>$miembros]);
     }
 
     public function create(){
