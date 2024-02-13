@@ -63,6 +63,9 @@
             <li>
                 Asistencia: Módulo exclusivo de asistencias donde podemos generar reportes en formato <b>PDF</b> para compartir
             </li>
+            <li>
+                Miembros: Módulo exclusivo de miembros donde podemos generar reportes en formato <b>PDF</b> para compartir
+            </li>
         </ul>
     </li>   
 </p>
