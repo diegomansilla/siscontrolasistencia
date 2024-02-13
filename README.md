@@ -66,6 +66,9 @@
             <li>
                 Miembros: Módulo exclusivo de miembros donde podemos generar reportes en formato <b>PDF</b> para compartir
             </li>
+            <li>
+                Ministerios: Módulo exclusivo de ministerios donde podemos generar reportes en formato <b>PDF</b> para compartir
+            </li>
         </ul>
     </li>   
 </p>
