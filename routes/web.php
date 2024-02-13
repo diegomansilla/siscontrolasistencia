@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AsistenciaController;
 use App\Http\Controllers\MiembroController;
+use App\Http\Controllers\MinisterioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +18,15 @@ use App\Http\Controllers\MiembroController;
 //Route::get('/', function () {return view('index');})->middleware('auth');;
 
 Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('index');
-Route::get('/miembros/reportes', [MiembroController::class, 'reportes'])->name('reportes');
-Route::get('/miembros/pdf', [MiembroController::class, 'pdf'])->name('pdf');
-Route::get('/miembros/pdf_fechas', [MiembroController::class, 'pdf_fechas'])->name('pdf_fechas');
 Route::get('/asistencias/reportes', [AsistenciaController::class, 'reportes'])->name('reportes');
 Route::get('/asistencias/pdf', [AsistenciaController::class, 'pdf'])->name('pdf');
 Route::get('/asistencias/pdf_fechas', [AsistenciaController::class, 'pdf_fechas'])->name('pdf_fechas');
+Route::get('/miembros/reportes', [MiembroController::class, 'reportes'])->name('reportes');
+Route::get('/miembros/pdf', [MiembroController::class, 'pdf'])->name('pdf');
+Route::get('/miembros/pdf_fechas', [MiembroController::class, 'pdf_fechas'])->name('pdf_fechas');
+Route::get('/ministerios/reportes', [MinisterioController::class, 'reportes'])->name('reportes');
+Route::get('/ministerios/pdf', [MinisterioController::class, 'pdf'])->name('pdf');
+Route::get('/ministerios/pdf_fechas', [MinisterioController::class, 'pdf_fechas'])->name('pdf_fechas');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

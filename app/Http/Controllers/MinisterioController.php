@@ -6,6 +6,8 @@ use App\Models\Ministerio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\App;
 
 class MinisterioController extends Controller
 {
@@ -16,6 +18,29 @@ class MinisterioController extends Controller
     {
         $ministerios = Ministerio::all();
         return view('ministerios.index',['ministerios'=>$ministerios]);
+    }
+
+    public function reportes(){
+        //$miembros = Miembro::all()->sortByDesc('id');
+        return view('ministerios.reportes');
+    }
+
+    public function pdf()
+    {
+        $ministerios = Ministerio::paginate();
+        $pdf = Pdf::loadView('ministerios.pdf', ['ministerios'=>$ministerios]);
+        return $pdf->stream();
+    }
+
+    public function pdf_fechas(Request $request)
+    {
+        $fi = $request->fi;
+        $ff = $request->ff;
+        $ministerios = Ministerio::where('fcha_ingreso','>=',$fi)->where('fcha_ingreso','<=',$ff)->get();
+        
+        $pdf = Pdf::loadView('ministerios.pdf_fechas', ['ministerios'=>$ministerios]);
+        return $pdf->stream();
+        //return view('miembro.pdf_fechas',['ministerios'=>$ministerios]);
     }
 
     /**

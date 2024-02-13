@@ -204,6 +204,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Miembros</p>
                   </a>
                 </li>
+
+                <li class="nav-item">
+                  <a href="{{url('ministerios/reportes')}}" class="nav-link">
+                    <i class="bi bi-person-add"></i>
+                    <p>Ministerios</p>
+                  </a>
+                </li>
               </ul>
             </li>
 
