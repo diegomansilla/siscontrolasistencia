@@ -144,13 +144,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{url('ministerios/create')}}" class="nav-link">
-                      <i class="bi bi-person-add"></i>
+                    <i class="bi bi-building-add"></i>
                       <p>Nuevo Ministerio</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{url('ministerios')}}" class="nav-link">
-                      <i class="bi bi-person-lines-fill"></i>
+                    <i class="bi bi-buildings-fill"></i>
                       <p>Listado de Ministerios</p>
                     </a>
                   </li>
@@ -169,13 +169,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="{{url('asistencias/create')}}" class="nav-link">
-                    <i class="bi bi-person-add"></i>
+                  <i class="bi bi-list-check"></i>
                     <p>Nueva Asistencia</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="{{url('asistencias')}}" class="nav-link">
-                    <i class="bi bi-person-lines-fill"></i>
+                  <i class="bi bi-list-task"></i>
                     <p>Listado de Asistencias</p>
                   </a>
                 </li>
@@ -193,21 +193,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="{{url('asistencias/reportes')}}" class="nav-link">
-                    <i class="bi bi-person-add"></i>
+                    <i class="bi bi-file-earmark-pdf"></i>
                     <p>Asistencias</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
                   <a href="{{url('miembros/reportes')}}" class="nav-link">
-                    <i class="bi bi-person-add"></i>
+                    <i class="bi bi-file-earmark-pdf"></i>
                     <p>Miembros</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
                   <a href="{{url('ministerios/reportes')}}" class="nav-link">
-                    <i class="bi bi-person-add"></i>
+                    <i class="bi bi-file-earmark-pdf"></i>
                     <p>Ministerios</p>
                   </a>
                 </li>
