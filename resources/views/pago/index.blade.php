@@ -1,6 +1,4 @@
-@extends('layouts.admin')
-
-@section('content')
+@extends('layouts.admin') @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
@@ -9,12 +7,12 @@
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">
-                            Asistencias
-                        </span>
+                                Pagos
+                            </span>
 
                         <div class="card-tools">
-                            <a href="{{url('/asistencias/create')}}" class="btn btn-primary">
-                                <i class="bi bi-person-fill-up"></i> Nueva Asistencia
+                            <a href="{{url('/pagos/create')}}" class="btn btn-primary">
+                                <i class="bi bi-person-fill-up"></i> Nuevo Pago
                             </a>
                         </div>
                     </div>
@@ -32,31 +30,33 @@
                                 <tr>
                                     <th>No</th>
 
-                                    <th>Fcha Asistencia</th>
-                                    <th>Nombres y Apellidos del Miembro</th>
+                                    <th>Monto</th>
+                                    <th>Fecha de Pago</th>
+                                    <th>Miembro</th>
+                                    <th>Ministerio</th>
+                                    <th>Concepto</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($asistencias as $asistencia)
+                                @foreach ($pagos as $pago)
                                 <tr>
                                     <td>{{ ++$i }}</td>
 
-                                    <td>{{ $asistencia->fcha_asistencia }}</td>
-                                    <td>{{ $asistencia->miembro->nombre_apellido }}</td>
+                                    <td>{{ $pago->monto }}</td>
+                                    <td>{{ $pago->fecha_pago }}</td>
+                                    <td>{{ $pago->miembro->nombre_apellido }}</td>
+                                    <td>{{ $pago->ministerio->nombre_ministerio }}</td>
+                                    <td>{{ $pago->concepto }}</td>
 
                                     <td>
-                                        <form action="{{ route('asistencias.destroy',$asistencia->id) }}" method="POST">
-                                            <a class="btn btn-sm btn-primary "
-                                                href="{{ route('asistencias.show',$asistencia->id) }}"><i
-                                                    class="fa fa-fw fa-eye"></i></a>
-                                            <a class="btn btn-sm btn-success"
-                                                href="{{ route('asistencias.edit',$asistencia->id) }}"><i
-                                                    class="fa fa-fw fa-edit"></i></a>
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" onclick="return confirm('Desea eliminar el registro?')" class="btn btn-danger btn-sm"><i
-                                                    class="fa fa-fw fa-trash"></i></button>
+                                        <form action="{{ route('pagos.destroy',$pago->id) }}" method="POST">
+                                            <a href="{{url('pagos',$pago->id)}}" type="button" class="btn btn-info"><i
+                                                class="bi bi-eye-fill"></i></a>
+                                            <a href="{{route('pagos.edit',$pago->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a> @csrf {{method_field('DELETE')}}
+                                            <button type="submit" onclick="return confirm('Desea eliminar el registro?')" class="btn btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
                                         </form>
                                     </td>
                                 </tr>
@@ -64,17 +64,17 @@
                             </tbody>
                         </table>
                         <script>
-                            $(function () {
+                            $(function() {
                                 $("#example1").DataTable({
                                     "pageLength": 10,
                                     "language": {
                                         "emptyTable": "No hay información",
-                                        "info": "Mostrando _START_ a _END_ de _TOTAL_ Asistencias",
-                                        "infoEmpty": "Mostrando 0 a 0 de 0 Asistencias",
-                                        "infoFiltered": "(Filtrado de MAX total Asistencias)",
+                                        "info": "Mostrando _START_ a _END_ de _TOTAL_ Pagos",
+                                        "infoEmpty": "Mostrando 0 a 0 de 0 Pagos",
+                                        "infoFiltered": "(Filtrado de MAX total Pagos)",
                                         "infoPostFix": "",
                                         "thousands": ",",
-                                        "lengthMenu": "Mostrar _MENU_ Asistencias",
+                                        "lengthMenu": "Mostrar _MENU_ Pagos",
                                         "loadingRecords": "Cargando...",
                                         "processing": "Procesando...",
                                         "search": "Buscador:",
@@ -86,7 +86,9 @@
                                             "previous": "Anterior"
                                         }
                                     },
-                                    "responsive": true, "lengthChange": true, "autoWidth": false,
+                                    "responsive": true,
+                                    "lengthChange": true,
+                                    "autoWidth": false,
                                     buttons: [{
                                         extend: 'collection',
                                         text: 'Reportes',
@@ -103,15 +105,12 @@
                                         }, {
                                             text: 'Imprimir',
                                             extend: 'print'
-                                        }
-                                        ]
-                                    },
-                                    {
+                                        }]
+                                    }, {
                                         extend: 'colvis',
                                         text: 'Visor de columnas',
                                         collectionLayout: 'fixed three-column'
-                                    }
-                                    ],
+                                    }],
                                 }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
                             });
 
@@ -125,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            {!! $asistencias->links() !!}
+            {!! $pagos->links() !!}
         </div>
     </div>
 </div>

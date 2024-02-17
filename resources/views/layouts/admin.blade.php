@@ -178,6 +178,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
+                                <i class="bi bi-building"></i>
+                                <p>
+                                    Pagos
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{url('pagos/create')}}" class="nav-link">
+                                        <i class="bi bi-building-add"></i>
+                                        <p>Nuevo Pago</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('pagos')}}" class="nav-link">
+                                        <i class="bi bi-buildings-fill"></i>
+                                        <p>Listado de Pagos</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
                                 <i class="bi bi-filetype-pdf"></i>
                                 <p>
                                     Reportes
@@ -207,31 +231,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </li>
                             </ul>
                         </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <i class="bi bi-building"></i>
-                                <p>
-                                    Pagos
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{url('pagos/create')}}" class="nav-link">
-                                        <i class="bi bi-building-add"></i>
-                                        <p>Nuevo Pago</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{url('pagos')}}" class="nav-link">
-                                        <i class="bi bi-buildings-fill"></i>
-                                        <p>Listado de Pagos</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
 
                         <li class="nav-item">
 
