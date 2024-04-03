@@ -102,7 +102,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </li>
                             </ul>
                         </li>
-                        @endcan @can('miembros')
+                        @endcan 
+                        @can('miembros')
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="bi bi-file-person-fill"></i>
@@ -126,7 +127,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </li>
                             </ul>
                         </li>
-                        @endcan @can('ministerios')
+                        @endcan 
+                        @can('ministerios')
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="bi bi-building"></i>
@@ -176,6 +178,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </ul>
                         </li>
 
+                        <!--GENERANDO LOS PERMISOS PARA PAGOS-->
+                        @can('pagos')
+                        @endcan
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="bi bi-building"></i>
@@ -276,10 +281,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <footer class="main-footer">
             <!-- To the right -->
             <div class="float-right d-none d-sm-inline">
-                Innovando para el futuro.
+                Innovación y Calidad.
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2024 <a href="#">DemSoft</a>.</strong> Todos los derechos reservados.
+            <strong>Copyright &copy; 2024 <a href="{{url('about')}}">DemSoft</a>.</strong> Todos los derechos reservados.
         </footer>
     </div>
     <!-- ./wrapper -->

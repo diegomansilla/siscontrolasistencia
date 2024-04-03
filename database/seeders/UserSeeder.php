@@ -27,8 +27,18 @@ class UserSeeder extends Seeder
         ]);
 
         User::create ([
-        'name' => 'Diego Mansilla',
-        'email' => 'diiego.mansilla@gmail.com',
+        'name' => 'Secretaria',
+        'email' => 'secretaria@admin.com',
+        'email_verified_at' => now(),
+        'password' => Hash::make('423611di'),
+        'fcha_ingreso' => now(),
+        'estado' => '1',
+        'remember_token' => Str::random(10),
+    ]);
+
+    User::create ([
+        'name' => 'Cobrador',
+        'email' => 'cobranzas@admin.com',
         'email_verified_at' => now(),
         'password' => Hash::make('423611di'),
         'fcha_ingreso' => now(),

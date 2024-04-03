@@ -24,7 +24,7 @@ Route::group(['middleware' => 'guest'], function(){
     Route::post('/login', 'Auth\LoginController@login');
 });
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => ['auth', 'checkUserStatus']], function (){
     Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('index');
     Route::get('/asistencias/reportes', [AsistenciaController::class, 'reportes'])->name('reportes');
     Route::get('/asistencias/pdf', [AsistenciaController::class, 'pdf'])->name('pdf');
@@ -36,6 +36,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/ministerios/pdf', [MinisterioController::class, 'pdf'])->name('pdf');
     Route::get('/ministerios/pdf_fechas', [MinisterioController::class, 'pdf_fechas'])->name('pdf_fechas');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::view('/about', 'about.index');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
 
 //Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('index');

@@ -15,12 +15,13 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        //Cuenta con 2 roles. Creando Roles
+        //Cuenta con 3 roles. Creando Roles
         $admin = Role::create(['name' => 'admin']);
         $secretaria = Role::create(['name' => 'secretaria']);
+        $tesorero = Role::create(['name' => 'cobrador']);
 
-        Permission::create(['name' => 'index'])->syncRoles([$admin,$secretaria]);
-        Permission::create(['name' => 'reportes'])->syncRoles([$admin,$secretaria]);
+        Permission::create(['name' => 'index'])->syncRoles([$admin,$secretaria,$tesorero]);
+        Permission::create(['name' => 'reportes'])->syncRoles([$admin,$secretaria,$tesorero]);
         Permission::create(['name' => 'pdf'])->syncRoles([$admin,$secretaria]);
         Permission::create(['name' => 'pdf_fechas'])->syncRoles([$admin,$secretaria]);
         Permission::create(['name' => 'home'])->syncRoles([$admin,$secretaria]);
@@ -28,8 +29,10 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'ministerios'])->syncRoles([$admin]);
         Permission::create(['name' => 'usuarios'])->syncRoles([$admin]);
         Permission::create(['name' => 'asistencias'])->syncRoles([$admin,$secretaria]);
+        Permission::create(['name' => 'pagos'])->syncRoles([$admin,$tesorero]);
 
         User::find(1)->assignRole($admin);
         User::find(2)->assignRole($secretaria);
+        User::find(3)->assignRole($tesorero);
     }
 }

@@ -1,5 +1,6 @@
 
 <h1 align="center"><b>Sistema de Control de Asistencia con Framework Laravel V10, Bases de datos MySQL y Frontend con AdminLTE y Bootstrap</b></h1>
+<p><b>SISTEMA SOLO DE PRUEBAS</b></p>
 <p>Este sistema tiene como fin el capturar la asistencia tomada por un secretario/a con el fin de catalogar la periodicidad de asistencia de sus fieles. Puede adaptarse a cualquier necesidad que el cliente requiera ya que trabaja de manera modular.</p>
 <p>A continuación dejo los módulos creados, submenus de cada uno, función y futuras mejoras</p>
 <p>
